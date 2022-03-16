@@ -94,3 +94,32 @@ extension UIDatePicker {
     }
     
 }
+extension String {
+    func isValidName() -> Bool {
+        let inputRegEx = "^[a-zA-Z\\ ]{10,200}$"
+        let inputpred = NSPredicate(format: "SELF MATCHES %@", inputRegEx)
+        return inputpred.evaluate(with:self)
+    }
+    
+    func isValidEmail() -> Bool {
+        let inputRegEx = "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[A-Za-z]{2,64}"
+        let inputpred = NSPredicate(format: "SELF MATCHES %@", inputRegEx)
+        return inputpred.evaluate(with:self)
+    }
+    
+    func isValidPhone() -> Bool {
+        let inputRegEx = "^(()|(00))[0-9]{11,14}$"
+        let inputpred = NSPredicate(format: "SELF MATCHES %@", inputRegEx)
+        return inputpred.evaluate(with:self)
+    }
+    
+    func isValidPassword() -> Bool {
+        let inputRegEx = "^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*()-_+={}?>.<,:;~`']{8,}$"
+        let inputpred = NSPredicate(format: "SELF MATCHES %@", inputRegEx)
+        return inputpred.evaluate(with:self)
+    }
+    
+    public func filterPhoneNumber() -> String {
+        return String(self.filter {!" ()+-\n\t\r".contains($0)})
+    }
+}

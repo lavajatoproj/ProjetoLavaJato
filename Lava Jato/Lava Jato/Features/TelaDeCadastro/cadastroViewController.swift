@@ -127,7 +127,45 @@ class cadastroViewController: UIViewController {
         let textAtributes = [NSAttributedString.Key.foregroundColor:UIColor.ColorDefault]
         navigationController?.navigationBar.titleTextAttributes = textAtributes
     }
-
+    
+    @IBAction func nameAct(_ sender: Any) {
+        let text = self.nameRegisterTextField.text ?? ""
+        if text.isValidName() {
+            self.nameRegisterTextField.textColor = UIColor.black
+        } else {
+            self.nameRegisterTextField.textColor = UIColor.red
+        }
+    }
+    
+    @IBAction func emailAct(_ sender: Any) {
+        let text = self.emailRegisterTextField.text ?? ""
+        if text.isValidEmail() {
+            self.emailRegisterTextField.textColor = UIColor.black
+        } else {
+            self.emailRegisterTextField.textColor = UIColor.red
+        }
+    }
+    
+    
+    @IBAction func phoneAct(_ sender: Any) {
+        let text = self.numberRegisterTextField.text ?? ""
+        if text.filterPhoneNumber().isValidPhone() {
+            self.numberRegisterTextField.textColor = UIColor.black
+        } else {
+            self.numberRegisterTextField.textColor = UIColor.red
+        }
+    }
+    
+    
+    @IBAction func cpfAct(_ sender: Any) {
+        let text = self.documentRegisterTextField.text ?? ""
+        if text.isCPF == false{
+            self.documentRegisterTextField.layer.borderColor = UIColor.black.cgColor
+        }else{
+            self.documentRegisterTextField.layer.borderColor = UIColor.red.cgColor
+        }
+    }
+    
 }
 extension cadastroViewController:UITextFieldDelegate{
     func textFieldDidBeginEditing(_ textField: UITextField) {
