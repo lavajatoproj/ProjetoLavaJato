@@ -223,7 +223,7 @@ extension cadastroViewController:UITextFieldDelegate{
                 self.emailRegisterTextField.layer.borderColor = UIColor.lightGray.cgColor
             }
         }
-        if self.nameRegisterTextField.text != "" && self.numberRegisterTextField.text != "" && self.dateRegisterTextField.text != "" && self.documentRegisterTextField.text != "" && self.estadoCivilRegisterTextField.text != "" && self.sexoRegisterTextField.text != "" && self.emailRegisterTextField.text != "" && self.checkboxFlag == true {
+        if self.nameRegisterTextField.text != "" && self.numberRegisterTextField.text != "" && self.dateRegisterTextField.text != "" && self.documentRegisterTextField.text != "" && self.estadoCivilRegisterTextField.text != "" && self.sexoRegisterTextField.text != "" && self.emailRegisterTextField.text != "" && self.checkboxFlag == true && self.nameRegisterTextField.textColor == UIColor.black && self.emailRegisterTextField.textColor == UIColor.black && self.numberRegisterTextField.textColor == UIColor.black{
                 self.registerButton.isEnabled = true
             }else{
                 self.registerButton.isEnabled = false

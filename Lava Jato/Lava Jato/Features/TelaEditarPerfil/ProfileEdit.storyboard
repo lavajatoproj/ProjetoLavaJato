@@ -65,6 +65,9 @@
                                         </constraints>
                                         <attributedString key="attributedText"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" keyboardType="namePhonePad" textContentType="name"/>
+                                        <connections>
+                                            <action selector="nameAct:" destination="kqS-JS-xWW" eventType="editingDidEnd" id="9fq-kc-92y"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="(DD)99999-9999" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wpg-XO-tLY">
                                         <rect key="frame" x="48.5" y="399" width="317" height="34"/>
@@ -74,6 +77,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="phonePad" textContentType="tel"/>
+                                        <connections>
+                                            <action selector="phoneAct:" destination="kqS-JS-xWW" eventType="editingDidEnd" id="tPJ-2C-3az"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email@dominio.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="50M-AS-wCM">
                                         <rect key="frame" x="48.5" y="468" width="317" height="34"/>
@@ -83,6 +89,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" textContentType="email"/>
+                                        <connections>
+                                            <action selector="emailAct:" destination="kqS-JS-xWW" eventType="editingDidEnd" id="Yxt-tl-Kph"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex: 01/01/2022" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VhG-PR-Znm">
                                         <rect key="frame" x="48.5" y="537" width="317" height="34"/>

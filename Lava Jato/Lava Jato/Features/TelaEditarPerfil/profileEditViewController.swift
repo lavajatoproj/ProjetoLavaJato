@@ -94,6 +94,36 @@ class profileEditViewController: UIViewController {
     @IBAction func tappedChangeService(_ sender: UIButton) {
         performSegue(withIdentifier: "changeServicesSegue", sender: nil)
     }
+    
+    @IBAction func nameAct(_ sender: Any) {
+        let text = self.nameTextField.text ?? ""
+        if text.isValidName() {
+            self.nameTextField.textColor = UIColor.black
+        } else {
+            self.nameTextField.textColor = UIColor.red
+        }
+    }
+    
+    
+    @IBAction func phoneAct(_ sender: Any) {
+        let text = self.numberTextField.text ?? ""
+        if text.filterPhoneNumber().isValidPhone() {
+            self.numberTextField.textColor = UIColor.black
+        } else {
+            self.numberTextField.textColor = UIColor.red
+        }
+    }
+    
+    @IBAction func emailAct(_ sender: Any) {
+        let text = self.emailTextField.text ?? ""
+        if text.isValidEmail() {
+            self.emailTextField.textColor = UIColor.black
+        } else {
+            self.emailTextField.textColor = UIColor.red
+        }
+    }
+    
+    
 }
 
 extension profileEditViewController:UITextFieldDelegate{
@@ -140,14 +170,8 @@ extension profileEditViewController:UITextFieldDelegate{
             }
         }
         
-        if self.nameTextField.text != "" && self.emailTextField.text != "" && self.numberTextField.text != "" && self.dateTextField.text != ""{
-            if self.emailTextField.validateEmail(){
-                self.emailTextField.layer.borderColor = UIColor.lightGray.cgColor
+        if self.nameTextField.text != "" && self.emailTextField.text != "" && self.numberTextField.text != "" && self.dateTextField.text != "" && self.nameTextField.textColor == UIColor.black && self.emailTextField.textColor == UIColor.black && self.numberTextField.textColor == UIColor.black{
                 self.saveButton.isEnabled = true
-            }else{
-                self.emailTextField.layer.borderColor = UIColor.red.cgColor
-                self.saveButton.isEnabled = false
-            }
         }else{
             self.saveButton.isEnabled = false
         }
