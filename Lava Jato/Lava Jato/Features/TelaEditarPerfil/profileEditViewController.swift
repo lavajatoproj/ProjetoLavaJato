@@ -18,6 +18,8 @@ class profileEditViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var saveButton: UIButton!
     
+    //Para capturar data no textField
+    let datePicker = UIDatePicker()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +50,36 @@ class profileEditViewController: UIViewController {
         
         self.saveButton.isEnabled = false
         
+        self.createDatePicker()
+    }
+
+//criando barra com botão done no datePicker
+    func createToolbar () -> UIToolbar {
+        //toolbar
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
+        toolbar.setItems([doneButton], animated: true)
+        return toolbar
+    }
+    
+//definindo funcoes e validacao para o datePicker
+    public func createDatePicker(){
+        datePicker.preferredDatePickerStyle = .wheels
+        datePicker.datePickerMode = .date
+        datePicker.set18YearValidation()
+        dateTextField.inputView = datePicker
+        dateTextField.inputAccessoryView = createToolbar()
+        }
+    
+//definindo acao apos apertar o botao done
+    @objc func donePressed(){
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        self.dateTextField.text = dateFormatter.string(from: datePicker.date)
+        self.view.endEditing(true)
     }
     
     @IBAction func tappedSaveButton(_ sender: UIButton) {
@@ -63,6 +95,7 @@ class profileEditViewController: UIViewController {
         performSegue(withIdentifier: "changeServicesSegue", sender: nil)
     }
 }
+
 extension profileEditViewController:UITextFieldDelegate{
     
     //textFieldDidBeginEditing = Não faz validação, apenas da foco ao teclado, ou seja, todas as funções presentes serão executadas assim que houver o clique no textfield.
@@ -121,8 +154,7 @@ extension profileEditViewController:UITextFieldDelegate{
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        print(#function)
-        textField.resignFirstResponder()
+            textField.resignFirstResponder()
         return true
     }
     
