@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		2EA0FBA7AF94233EBB6451CF /* libPods-Lava Jato.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0EA5818F1E5F9862B73A09 /* libPods-Lava Jato.a */; };
 		442DD11E27D05D0900C4F033 /* PerfilUsuario.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 442DD11D27D05D0900C4F033 /* PerfilUsuario.storyboard */; };
+		443881C627E196A900FA4F64 /* ValorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443881C427E196A900FA4F64 /* ValorTableViewCell.swift */; };
+		443881C727E196A900FA4F64 /* ValorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 443881C527E196A900FA4F64 /* ValorTableViewCell.xib */; };
+		443881CB27E1973A00FA4F64 /* ElementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443881C927E1973A00FA4F64 /* ElementTableViewCell.swift */; };
+		443881CC27E1973A00FA4F64 /* ElementTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 443881CA27E1973A00FA4F64 /* ElementTableViewCell.xib */; };
+		443881CF27E197BD00FA4F64 /* ProfileGenero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443881CE27E197BD00FA4F64 /* ProfileGenero.swift */; };
+		443881D127E197CE00FA4F64 /* ProfileValor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443881D027E197CE00FA4F64 /* ProfileValor.swift */; };
 		443BAE9827BF4DE400751C16 /* TelaPrincipal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 443BAE9727BF4DE400751C16 /* TelaPrincipal.storyboard */; };
 		443BAE9A27BF51A100751C16 /* TelaPrincipal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443BAE9927BF51A000751C16 /* TelaPrincipal.swift */; };
 		445C7C0F27DD113F000E9CD2 /* ServicoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445C7C0E27DD113F000E9CD2 /* ServicoCollectionViewCell.swift */; };
@@ -65,6 +71,12 @@
 /* Begin PBXFileReference section */
 		1F0EA5818F1E5F9862B73A09 /* libPods-Lava Jato.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Lava Jato.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		442DD11D27D05D0900C4F033 /* PerfilUsuario.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PerfilUsuario.storyboard; sourceTree = "<group>"; };
+		443881C427E196A900FA4F64 /* ValorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValorTableViewCell.swift; sourceTree = "<group>"; };
+		443881C527E196A900FA4F64 /* ValorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ValorTableViewCell.xib; sourceTree = "<group>"; };
+		443881C927E1973A00FA4F64 /* ElementTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementTableViewCell.swift; sourceTree = "<group>"; };
+		443881CA27E1973A00FA4F64 /* ElementTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ElementTableViewCell.xib; sourceTree = "<group>"; };
+		443881CE27E197BD00FA4F64 /* ProfileGenero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileGenero.swift; sourceTree = "<group>"; };
+		443881D027E197CE00FA4F64 /* ProfileValor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileValor.swift; sourceTree = "<group>"; };
 		443BAE9727BF4DE400751C16 /* TelaPrincipal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TelaPrincipal.storyboard; sourceTree = "<group>"; };
 		443BAE9927BF51A000751C16 /* TelaPrincipal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaPrincipal.swift; sourceTree = "<group>"; };
 		445C7C0E27DD113F000E9CD2 /* ServicoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicoCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -145,6 +157,9 @@
 		442DD11327D05AD300C4F033 /* Filtros */ = {
 			isa = PBXGroup;
 			children = (
+				443881CD27E1978F00FA4F64 /* Model */,
+				443881C827E1971E00FA4F64 /* Cell Element */,
+				443881C327E1962D00FA4F64 /* Cell Valor */,
 				449EFAD227DE7995002111DE /* FiltroViewController.swift */,
 				449EFAD427DE79BE002111DE /* FiltroStoryboard.storyboard */,
 			);
@@ -158,6 +173,33 @@
 				442DD11D27D05D0900C4F033 /* PerfilUsuario.storyboard */,
 			);
 			path = PerfilUsuario;
+			sourceTree = "<group>";
+		};
+		443881C327E1962D00FA4F64 /* Cell Valor */ = {
+			isa = PBXGroup;
+			children = (
+				443881C427E196A900FA4F64 /* ValorTableViewCell.swift */,
+				443881C527E196A900FA4F64 /* ValorTableViewCell.xib */,
+			);
+			path = "Cell Valor";
+			sourceTree = "<group>";
+		};
+		443881C827E1971E00FA4F64 /* Cell Element */ = {
+			isa = PBXGroup;
+			children = (
+				443881C927E1973A00FA4F64 /* ElementTableViewCell.swift */,
+				443881CA27E1973A00FA4F64 /* ElementTableViewCell.xib */,
+			);
+			path = "Cell Element";
+			sourceTree = "<group>";
+		};
+		443881CD27E1978F00FA4F64 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				443881CE27E197BD00FA4F64 /* ProfileGenero.swift */,
+				443881D027E197CE00FA4F64 /* ProfileValor.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		443BAE8D27BF454800751C16 /* Features */ = {
@@ -493,6 +535,7 @@
 				DA9954CE27DF8A2D00C89D76 /* Main.storyboard in Resources */,
 				442DD11E27D05D0900C4F033 /* PerfilUsuario.storyboard in Resources */,
 				E13E5B2027D5965B000CB644 /* ErrorConection.storyboard in Resources */,
+				443881C727E196A900FA4F64 /* ValorTableViewCell.xib in Resources */,
 				E13E5B2927D6EBF6000CB644 /* ScreenRegister.storyboard in Resources */,
 				E15CA71C27D53366002355B9 /* Maps.storyboard in Resources */,
 				E13E5B3E27D700B1000CB644 /* SF-Pro-Text-Regular.otf in Resources */,
@@ -514,6 +557,7 @@
 				A212222027D13EE500B24208 /* MyCustomCell.xib in Resources */,
 				E13E5B3C27D700A1000CB644 /* SF-Pro-Text-Medium.otf in Resources */,
 				443BAE9827BF4DE400751C16 /* TelaPrincipal.storyboard in Resources */,
+				443881CC27E1973A00FA4F64 /* ElementTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,20 +614,24 @@
 				E162E07B27ADF53E00C6AD32 /* ViewController.swift in Sources */,
 				DA9954C927DF899600C89D76 /* NotificationTableViewCell.swift in Sources */,
 				449EFAD327DE7995002111DE /* FiltroViewController.swift in Sources */,
+				443881CB27E1973A00FA4F64 /* ElementTableViewCell.swift in Sources */,
 				E162E07727ADF53E00C6AD32 /* AppDelegate.swift in Sources */,
 				445C7C1227DD140D000E9CD2 /* Servico.swift in Sources */,
 				A20B841827DF051B00F29991 /* cellTableViewCell.swift in Sources */,
 				E13E5B3227D6F7FA000CB644 /* UIViewController.swift in Sources */,
 				DAB173D027D1508A00104761 /* cadastroViewController.swift in Sources */,
 				A212221B27D13EB000B24208 /* listaDeServicosViewController.swift in Sources */,
+				443881CF27E197BD00FA4F64 /* ProfileGenero.swift in Sources */,
 				E13E5B2C27D6F5F1000CB644 /* UIcolor.swift in Sources */,
 				DA12C77A27D105BA00B6F080 /* profileEditViewController.swift in Sources */,
 				445C7C0F27DD113F000E9CD2 /* ServicoCollectionViewCell.swift in Sources */,
+				443881D127E197CE00FA4F64 /* ProfileValor.swift in Sources */,
 				443BAE9A27BF51A100751C16 /* TelaPrincipal.swift in Sources */,
 				E13E5B1E27D59644000CB644 /* ErrorConectionViewController.swift in Sources */,
 				E13E5B3027D6F781000CB644 /* UITextField.swift in Sources */,
 				449EFAA727DE3AF4002111DE /* PerfilUsuarioViewController.swift in Sources */,
 				DA9954C627DF895700C89D76 /* Profile.swift in Sources */,
+				443881C627E196A900FA4F64 /* ValorTableViewCell.swift in Sources */,
 				E162E07927ADF53E00C6AD32 /* SceneDelegate.swift in Sources */,
 				DAF0152C27C45B38009E55F6 /* HelpViewController.swift in Sources */,
 				A212221727D13E7F00B24208 /* meusServicosViewController.swift in Sources */,

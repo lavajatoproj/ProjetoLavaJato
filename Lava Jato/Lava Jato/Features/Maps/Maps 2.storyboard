@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Localização-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="maps" id="Y6W-OH-hqX" customClass="MapsViewController" customModule="Lava_Jato" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="jUW-qA-u4h">
+                                <rect key="frame" x="0.0" y="-56" width="414" height="958"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tNJ-ZC-ItX">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vS3-o1-9py" customClass="GMSMapView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="vS3-o1-9py" secondAttribute="trailing" id="DO0-Yg-puj"/>
+                                    <constraint firstItem="vS3-o1-9py" firstAttribute="top" secondItem="tNJ-ZC-ItX" secondAttribute="top" id="GzT-3g-64i"/>
+                                    <constraint firstItem="vS3-o1-9py" firstAttribute="leading" secondItem="tNJ-ZC-ItX" secondAttribute="leading" id="QRI-mq-l8v"/>
+                                    <constraint firstAttribute="bottom" secondItem="vS3-o1-9py" secondAttribute="bottom" id="yLg-TQ-2UT"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="tNJ-ZC-ItX" secondAttribute="bottom" id="ENz-g5-Hfl"/>
+                            <constraint firstItem="tNJ-ZC-ItX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Fnr-EL-TAR"/>
+                            <constraint firstItem="tNJ-ZC-ItX" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="GW2-Mg-KoT"/>
+                            <constraint firstItem="jUW-qA-u4h" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="WVh-BN-wXA"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="tNJ-ZC-ItX" secondAttribute="trailing" id="atJ-ZW-Tlx"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="jUW-qA-u4h" secondAttribute="trailing" id="l39-XP-eLt"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="jUW-qA-u4h" secondAttribute="bottom" constant="-40" id="qtV-Z7-OFL"/>
+                            <constraint firstItem="jUW-qA-u4h" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="-100" id="vB7-Dt-d85"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Localização" id="ZlI-Rx-bnw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="944.92753623188412" y="81.696428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="440" height="926"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

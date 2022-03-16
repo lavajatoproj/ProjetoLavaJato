@@ -58,7 +58,7 @@ extension ViewController: UICollectionViewDelegateFlowLayout{
 }
 
 
-
+//
 extension UIView {
     func desingMyCell(){
         self.layer.cornerRadius = 10
