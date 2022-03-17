@@ -1,33 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="K5p-ZV-VOa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mBV-G2-uKt">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="twK-yB-LRO">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Hwb-Ye-vLC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <navigationController id="K5p-ZV-VOa" sceneMemberID="viewController">
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CiM-3I-gV8">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" systemColor="systemYellowColor"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="mBV-G2-uKt" kind="relationship" relationship="rootViewController" id="wIL-cR-dv1"/>
-                    </connections>
-                </navigationController>
-            </objects>
-            <point key="canvasLocation" x="-630" y="-9"/>
-        </scene>
         <!--Notificações-->
         <scene sceneID="x7S-zA-3JF">
             <objects>
@@ -40,17 +21,25 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_2" translatesAutoresizingMaskIntoConstraints="NO" id="tmI-LT-IUC">
-                                <rect key="frame" x="7" y="118" width="400" height="695"/>
+                                <rect key="frame" x="7" y="74" width="400" height="788"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="yXM-nO-ThW">
-                                <rect key="frame" x="10" y="138" width="394" height="675"/>
+                                <rect key="frame" x="10" y="94" width="394" height="768"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notificações" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NcZ-PQ-aox">
+                                <rect key="frame" x="154" y="44" width="106" height="22"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <color key="textColor" name="ColorDefault"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="O4S-Dc-0xx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="O4S-Dc-0xx" firstAttribute="trailing" secondItem="tmI-LT-IUC" secondAttribute="trailing" constant="7" id="BZ6-f2-Hku"/>
+                            <constraint firstItem="NcZ-PQ-aox" firstAttribute="top" secondItem="O4S-Dc-0xx" secondAttribute="top" id="IWi-JT-DO5"/>
+                            <constraint firstItem="NcZ-PQ-aox" firstAttribute="centerX" secondItem="AGg-Sf-acf" secondAttribute="centerX" id="JUz-9G-Ohs"/>
                             <constraint firstItem="O4S-Dc-0xx" firstAttribute="bottom" secondItem="tmI-LT-IUC" secondAttribute="bottom" id="Jsr-Hd-sQs"/>
                             <constraint firstAttribute="bottom" secondItem="g9f-oI-6UG" secondAttribute="bottom" id="Puc-Gf-wzQ"/>
                             <constraint firstItem="g9f-oI-6UG" firstAttribute="leading" secondItem="O4S-Dc-0xx" secondAttribute="leading" id="Qwp-LX-y15"/>
@@ -78,11 +67,11 @@
     <resources>
         <image name="Background_2" width="443" height="893"/>
         <image name="background-2" width="744" height="1133"/>
+        <namedColor name="ColorDefault">
+            <color red="0.9570000171661377" green="0.7369999885559082" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

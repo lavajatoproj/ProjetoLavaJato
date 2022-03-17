@@ -18,6 +18,32 @@ class profileEditViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var saveButton: UIButton!
     
+    class PopUpWindow: UIViewController {
+        
+        private let popUpWindowView = PopUpWindowView()
+
+        init(title: String, text: String, buttontext: String) {
+            super.init(nibName: nil, bundle: nil)
+            modalTransitionStyle = .crossDissolve
+                    modalPresentationStyle = .overFullScreen
+                    
+                    popUpWindowView.popupTitle.text = title
+                    popUpWindowView.popupText.text = text
+                    popUpWindowView.popupButton.setTitle(buttontext, for: .normal)
+            popUpWindowView.popupButton.addTarget(self, action: #selector(dismissView), for: .touchUpInside)
+            view = popUpWindowView
+
+        }
+
+        required init(coder aDecoder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+        @objc func dismissView(){
+            self.dismiss(animated: true, completion: nil)
+        }
+      
+    }
+    
     //Para capturar data no textField
     let datePicker = UIDatePicker()
     
@@ -82,12 +108,13 @@ class profileEditViewController: UIViewController {
         self.view.endEditing(true)
     }
     
+    
     @IBAction func tappedSaveButton(_ sender: UIButton) {
-        performSegue(withIdentifier: "saveButtonSegue", sender: nil)
+        var popUpWindow: PopUpWindow!
+        popUpWindow = PopUpWindow(title: "Concluído", text: "Suas alterações foram salvas", buttontext: "Confirmar")
+        self.present(popUpWindow, animated: true, completion: nil)
     }
-    @IBAction func tappedBackButton(_ sender: UIButton) {
-        performSegue(withIdentifier: "returnUserProfileSegue", sender: nil)
-    }
+    
     @IBAction func tappedChangePassword(_ sender: UIButton) {
         performSegue(withIdentifier: "changePasswordSegue", sender: nil)
     }

@@ -85,8 +85,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
                                                 <connections>
-                                                    <action selector="tappedNotification:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="aHe-Bh-UQC"/>
-                                                    <segue destination="BOT-9x-kaN" kind="show" identifier="notificationSegue" id="AWL-p4-QwY"/>
+                                                    <segue destination="BOT-9x-kaN" kind="showDetail" identifier="notificationSegue" id="AWL-p4-QwY"/>
                                                 </connections>
                                             </button>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NXR-bw-rkC">
@@ -201,7 +200,6 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="tappedHelpButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="fFw-Ha-q8z"/>
                                                     <segue destination="59H-Fn-VK9" kind="show" identifier="helpPageSegue" id="6nG-bX-m1D"/>
                                                 </connections>
                                             </button>
@@ -358,7 +356,6 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="default"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="tappedEditProfile:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Auc-J0-Bmd"/>
                                     <segue destination="A9D-wy-DN1" kind="show" identifier="editProfileSegue" id="Oph-2P-817"/>
                                 </connections>
                             </button>
