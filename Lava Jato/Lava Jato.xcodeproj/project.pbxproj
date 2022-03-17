@@ -19,6 +19,7 @@
 		443BAE9A27BF51A100751C16 /* TelaPrincipal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443BAE9927BF51A000751C16 /* TelaPrincipal.swift */; };
 		445C7C0F27DD113F000E9CD2 /* ServicoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445C7C0E27DD113F000E9CD2 /* ServicoCollectionViewCell.swift */; };
 		445C7C1227DD140D000E9CD2 /* Servico.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445C7C1127DD140C000E9CD2 /* Servico.swift */; };
+		447549B127E2993E00C98BE3 /* ProfileImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447549B027E2993E00C98BE3 /* ProfileImg.swift */; };
 		449EFAA727DE3AF4002111DE /* PerfilUsuarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449EFAA627DE3AF3002111DE /* PerfilUsuarioViewController.swift */; };
 		449EFAD327DE7995002111DE /* FiltroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449EFAD227DE7995002111DE /* FiltroViewController.swift */; };
 		449EFAD527DE79BE002111DE /* FiltroStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 449EFAD427DE79BE002111DE /* FiltroStoryboard.storyboard */; };
@@ -81,6 +82,7 @@
 		443BAE9927BF51A000751C16 /* TelaPrincipal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaPrincipal.swift; sourceTree = "<group>"; };
 		445C7C0E27DD113F000E9CD2 /* ServicoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicoCollectionViewCell.swift; sourceTree = "<group>"; };
 		445C7C1127DD140C000E9CD2 /* Servico.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Servico.swift; sourceTree = "<group>"; };
+		447549B027E2993E00C98BE3 /* ProfileImg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImg.swift; sourceTree = "<group>"; };
 		449EFAA627DE3AF3002111DE /* PerfilUsuarioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfilUsuarioViewController.swift; sourceTree = "<group>"; };
 		449EFAD227DE7995002111DE /* FiltroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltroViewController.swift; sourceTree = "<group>"; };
 		449EFAD427DE79BE002111DE /* FiltroStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FiltroStoryboard.storyboard; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				443881CD27E1978F00FA4F64 /* Model */,
+				447549AB27E28A4E00C98BE3 /* Cell Img */,
 				443881C827E1971E00FA4F64 /* Cell Element */,
 				443881C327E1962D00FA4F64 /* Cell Valor */,
 				449EFAD227DE7995002111DE /* FiltroViewController.swift */,
@@ -198,6 +201,7 @@
 			children = (
 				443881CE27E197BD00FA4F64 /* ProfileGenero.swift */,
 				443881D027E197CE00FA4F64 /* ProfileValor.swift */,
+				447549B027E2993E00C98BE3 /* ProfileImg.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -240,6 +244,13 @@
 				445C7C1127DD140C000E9CD2 /* Servico.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		447549AB27E28A4E00C98BE3 /* Cell Img */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Cell Img";
 			sourceTree = "<group>";
 		};
 		68ABB571C485D0786C8C9893 /* Pods */ = {
@@ -625,6 +636,7 @@
 				E13E5B2C27D6F5F1000CB644 /* UIcolor.swift in Sources */,
 				DA12C77A27D105BA00B6F080 /* profileEditViewController.swift in Sources */,
 				445C7C0F27DD113F000E9CD2 /* ServicoCollectionViewCell.swift in Sources */,
+				447549B127E2993E00C98BE3 /* ProfileImg.swift in Sources */,
 				443881D127E197CE00FA4F64 /* ProfileValor.swift in Sources */,
 				443BAE9A27BF51A100751C16 /* TelaPrincipal.swift in Sources */,
 				E13E5B1E27D59644000CB644 /* ErrorConectionViewController.swift in Sources */,

@@ -9,15 +9,38 @@ import UIKit
 
 class ElementTableViewCell: UITableViewCell {
 
+    
+    
+    @IBOutlet weak var manLabel: UILabel!
+    @IBOutlet weak var womanLabel: UILabel!
+    @IBOutlet weak var manSwitch: UISwitch!
+    @IBOutlet weak var womanSwitch: UISwitch!
+    
+    
+    static let identifier:String = "ElementTableViewCell"
+    static func nib()->UINib{
+        return UINib(nibName: self.identifier, bundle: nil)
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        
+    
+    
+    // função que passa valores para elementos
+    public func setupCell(profile:ProfileGenero){
+        self.manLabel.text = profile.nameM
+        self.womanLabel.text = profile.nameF
     }
+
+    @IBAction func ativoMSwitch(_ sender: UISwitch) {
+    }
+    
+    
+    @IBAction func ativoFSwitch(_ sender: UISwitch) {
+    }
+    
+    
     
 }

@@ -10,7 +10,7 @@ import UIKit
 
 struct ProfileValor{
     let valor:String
-    let valorMinimo:String
-    let valorMaximo:String
+    var valorMinimo:String
+    var valorMaximo:String
     let local:String
 }
