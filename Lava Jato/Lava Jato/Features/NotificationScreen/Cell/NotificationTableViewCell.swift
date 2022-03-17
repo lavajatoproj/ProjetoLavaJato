@@ -21,7 +21,7 @@ class NotificationTableViewCell: UITableViewCell {
     @IBOutlet weak var backgroundXib: UIView!
     
     static let identifier:String = "NotificationTableViewCell"
-
+    
     static func nib()-> UINib{
         return UINib(nibName: self.identifier, bundle: nil)
     }
@@ -31,7 +31,7 @@ class NotificationTableViewCell: UITableViewCell {
         // Initialization code
         self.backgroundXib.layer.cornerRadius = 15.0
     }
-
+    
     public func dados(profile:Profile){
         self.nameLabel.text = profile.name
         self.userImage.image = profile.photo

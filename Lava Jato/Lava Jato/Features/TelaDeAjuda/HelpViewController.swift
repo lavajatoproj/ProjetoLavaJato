@@ -18,14 +18,6 @@ class HelpViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func tappedWhatsappButton(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "editProfileSegue", sender: nil)
-    }
-    
-    @IBAction func tappedEmailButton(_ sender: UIButton) {
-    }
-    
-    
     func Style(){
         let textAtributes = [NSAttributedString.Key.foregroundColor:UIColor.ColorDefault]
         navigationController?.navigationBar.titleTextAttributes = textAtributes
