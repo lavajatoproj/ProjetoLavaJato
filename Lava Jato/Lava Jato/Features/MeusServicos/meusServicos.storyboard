@@ -168,8 +168,7 @@
                                 <color key="baseForegroundColor" red="0.062228627502918243" green="0.48646479845046997" blue="0.85974377393722534" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </buttonConfiguration>
                             <connections>
-                                <action selector="btMaps:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="RGL-0Z-m9I"/>
-                                <segue destination="Lv4-jw-BNq" kind="show" identifier="maps" id="Pmm-JU-Jq2"/>
+                                <segue destination="Lv4-jw-BNq" kind="show" id="FE2-VK-iO8"/>
                             </connections>
                         </button>
                     </navigationItem>
@@ -187,12 +186,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2765.217391304348" y="81.696428571428569"/>
+            <point key="canvasLocation" x="2781" y="82"/>
         </scene>
-        <!--Maps-->
+        <!--maps-->
         <scene sceneID="6Dj-9v-WXB">
             <objects>
-                <viewControllerPlaceholder storyboardName="Maps" id="Lv4-jw-BNq" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="maps" storyboardName="Maps" referencedIdentifier="maps" id="Lv4-jw-BNq" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Maq-Mp-WQD"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jey-wH-BYj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

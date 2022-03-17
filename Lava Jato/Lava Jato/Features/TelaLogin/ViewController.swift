@@ -9,7 +9,6 @@ import UIKit
 import Foundation
 
 class ViewController: UIViewController {
-
     
     @IBOutlet weak var tfEmail: UITextField!
     @IBOutlet weak var tfPassword: UITextField!
@@ -20,27 +19,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLayout()
-
-        
+       
     }
     
     @IBAction func showResetPassword(_ sender: Any) {
-        performSegue(withIdentifier: "maps", sender: nil)
+        performSegue(withIdentifier: "password", sender: nil)
     }
     
-//
-//    @IBAction func btRegister(_ sender: Any) {
-//        performSegue(withIdentifier: "registerView", sender: nil)
-//    }
-    
-    
-
     @IBAction func Login(_ sender: Any) {
         self.performSegue(withIdentifier: "telaPrincipal", sender: nil)
     }
-
-//    @IBAction func register(_ sender: Any) {
-//    }
     
     @IBAction func tappedRegisterButton(_ sender: UIButton) {
         self.performSegue(withIdentifier: "screenRegisterSegue", sender: nil)
@@ -96,6 +84,4 @@ class ViewController: UIViewController {
         btRegister.layer.borderWidth = 2
         
     }
-    
 }
-

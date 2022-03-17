@@ -21,7 +21,14 @@
 			</array>
 		</dict>
 	</dict>
-	<key>Privacy - location When in Use Usage Description</key>
-	<string>Please allow access to see your location.</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>My app use device location services</string>
+    
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>My app use device location services</string>
+    
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>My app use device location services</string>
+    
 </dict>
 </plist>

@@ -11,7 +11,7 @@
         <!--Reset Password View Controller-->
         <scene sceneID="i9v-tw-TdO">
             <objects>
-                <viewController id="eKJ-vl-At3" customClass="resetPasswordViewController" customModule="Lava_Jato" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="password" id="eKJ-vl-At3" customClass="resetPasswordViewController" customModule="Lava_Jato" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zw0-Gg-OpI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
