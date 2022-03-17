@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GKF-JY-A6T">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kqS-JS-xWW">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -8,35 +8,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--PerfilUsuario-->
-        <scene sceneID="R6L-CB-qev">
-            <objects>
-                <viewControllerPlaceholder storyboardName="PerfilUsuario" id="nmK-bB-m4z" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="0uc-jB-bHr"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2pi-Ov-O93" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1299" y="463"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="fGK-Xr-39n">
-            <objects>
-                <navigationController id="GKF-JY-A6T" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fe5-bs-k1L">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" systemColor="systemYellowColor"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="kqS-JS-xWW" kind="relationship" relationship="rootViewController" id="FU7-FV-8Mm"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qq5-D0-W7v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="445" y="40"/>
-        </scene>
         <!--Editar Perfil-->
         <scene sceneID="s2g-S8-ehW">
             <objects>
@@ -49,10 +20,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oek-BX-J4y">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bcC-BQ-LTf">
-                                        <rect key="frame" x="0.0" y="280" width="414" height="866"/>
+                                        <rect key="frame" x="0.0" y="280" width="414" height="910"/>
                                         <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                     </imageView>
                                     <textField contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Nome Completo" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zf4-eB-7vG">
@@ -65,6 +36,9 @@
                                         </constraints>
                                         <attributedString key="attributedText"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" keyboardType="namePhonePad" textContentType="name"/>
+                                        <connections>
+                                            <action selector="nameAct:" destination="kqS-JS-xWW" eventType="editingDidEnd" id="9fq-kc-92y"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="(DD)99999-9999" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wpg-XO-tLY">
                                         <rect key="frame" x="48.5" y="399" width="317" height="34"/>
@@ -74,6 +48,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="phonePad" textContentType="tel"/>
+                                        <connections>
+                                            <action selector="phoneAct:" destination="kqS-JS-xWW" eventType="editingDidEnd" id="tPJ-2C-3az"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email@dominio.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="50M-AS-wCM">
                                         <rect key="frame" x="48.5" y="468" width="317" height="34"/>
@@ -83,6 +60,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" textContentType="email"/>
+                                        <connections>
+                                            <action selector="emailAct:" destination="kqS-JS-xWW" eventType="editingDidEnd" id="Yxt-tl-Kph"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex: 01/01/2022" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VhG-PR-Znm">
                                         <rect key="frame" x="48.5" y="537" width="317" height="34"/>
@@ -212,11 +192,10 @@
                                                 </fragment>
                                             </attributedString>
                                             <color key="baseForegroundColor" systemColor="systemYellowColor"/>
-                                            <color key="baseBackgroundColor" white="1" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="tappedSaveButton:" destination="kqS-JS-xWW" eventType="touchUpInside" id="aIU-Mu-Rbs"/>
-                                            <segue destination="EJ8-b2-v0I" kind="presentation" identifier="saveButtonSegue" modalPresentationStyle="fullScreen" id="8hE-fK-VEP"/>
+                                            <action selector="tappedSaveButton:" destination="kqS-JS-xWW" eventType="touchUpInside" id="G0c-dh-Umr"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0YP-zH-ucB">
@@ -239,19 +218,9 @@
                                             <constraint firstAttribute="height" constant="30" id="vZl-ky-0ge"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyb-kU-e3I">
-                                        <rect key="frame" x="0.0" y="0.0" width="53" height="46"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="back_button"/>
-                                        <connections>
-                                            <action selector="tappedBackButton:" destination="kqS-JS-xWW" eventType="touchUpInside" id="gIn-3v-5tr"/>
-                                            <segue destination="nmK-bB-m4z" kind="presentation" identifier="returnUserProfileSegue" modalPresentationStyle="fullScreen" id="kup-tv-Kq1"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="yzj-xN-yfc" firstAttribute="centerX" secondItem="Ius-If-pjX" secondAttribute="centerX" id="0KY-cr-Y71"/>
-                                    <constraint firstItem="kyb-kU-e3I" firstAttribute="top" secondItem="oek-BX-J4y" secondAttribute="top" id="0f1-RU-q4K"/>
                                     <constraint firstItem="yzj-xN-yfc" firstAttribute="top" secondItem="Zf4-eB-7vG" secondAttribute="bottom" constant="14" id="6le-aK-reh"/>
                                     <constraint firstAttribute="trailing" secondItem="bcC-BQ-LTf" secondAttribute="trailing" id="7IF-5Y-vhe"/>
                                     <constraint firstItem="9IN-ES-rVe" firstAttribute="top" secondItem="Yz7-UV-nXV" secondAttribute="bottom" constant="4" id="95a-Vs-5lP"/>
@@ -289,7 +258,6 @@
                                     <constraint firstItem="FCn-Tv-gaA" firstAttribute="centerX" secondItem="Ius-If-pjX" secondAttribute="centerX" id="tCW-LT-04v"/>
                                     <constraint firstItem="bcC-BQ-LTf" firstAttribute="leading" secondItem="oek-BX-J4y" secondAttribute="leading" id="uyK-25-Hbl"/>
                                     <constraint firstItem="VhG-PR-Znm" firstAttribute="top" secondItem="FCn-Tv-gaA" secondAttribute="bottom" id="x8M-fd-n2v"/>
-                                    <constraint firstItem="kyb-kU-e3I" firstAttribute="leading" secondItem="oek-BX-J4y" secondAttribute="leading" id="yeu-GO-CP6"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -332,16 +300,6 @@
             </objects>
             <point key="canvasLocation" x="2009" y="55"/>
         </scene>
-        <!--PerfilUsuario-->
-        <scene sceneID="sOG-a4-W2B">
-            <objects>
-                <viewControllerPlaceholder storyboardName="PerfilUsuario" id="EJ8-b2-v0I" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="abt-mA-dEb"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oIf-HF-NgE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2003" y="-12"/>
-        </scene>
         <!--meusServicos-->
         <scene sceneID="X3q-kC-naB">
             <objects>
@@ -357,7 +315,6 @@
         <image name="Image-3" width="185" height="176"/>
         <image name="Password_logo" width="30" height="30"/>
         <image name="Service_logo" width="30" height="30"/>
-        <image name="back_button" width="29" height="32"/>
         <image name="background" width="440" height="926"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

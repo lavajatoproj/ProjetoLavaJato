@@ -20,6 +20,8 @@ class cadastroViewController: UIViewController {
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var checkBox: UIButton!
     
+    let datePicker = UIDatePicker()
+    
     var checkboxFlag = false
     
     
@@ -66,7 +68,34 @@ class cadastroViewController: UIViewController {
         self.dateRegisterTextField.layer.cornerRadius = 5.0
         self.documentRegisterTextField.layer.cornerRadius = 5.0
         self.estadoCivilRegisterTextField.layer.cornerRadius = 5.0
+        
+        self.createDatePicker()
+    }
     
+    func createToolbar () -> UIToolbar {
+        //toolbar
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
+        toolbar.setItems([doneButton], animated: true)
+        return toolbar
+    }
+    
+    public func createDatePicker(){
+        datePicker.preferredDatePickerStyle = .wheels
+        datePicker.datePickerMode = .date
+        datePicker.set18YearValidation()
+        dateRegisterTextField.inputView = datePicker
+        dateRegisterTextField.inputAccessoryView = createToolbar()
+        }
+    
+    @objc func donePressed(){
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        self.dateRegisterTextField.text = dateFormatter.string(from: datePicker.date)
+        self.view.endEditing(true)
     }
     
     @IBAction func tappedCheckBox(_ sender: UIButton) {
@@ -98,6 +127,45 @@ class cadastroViewController: UIViewController {
         let textAtributes = [NSAttributedString.Key.foregroundColor:UIColor.ColorDefault]
         navigationController?.navigationBar.titleTextAttributes = textAtributes
     }
+    
+    @IBAction func nameAct(_ sender: Any) {
+        let text = self.nameRegisterTextField.text ?? ""
+        if text.isValidName() {
+            self.nameRegisterTextField.textColor = UIColor.black
+        } else {
+            self.nameRegisterTextField.textColor = UIColor.red
+        }
+    }
+    
+    @IBAction func emailAct(_ sender: Any) {
+        let text = self.emailRegisterTextField.text ?? ""
+        if text.isValidEmail() {
+            self.emailRegisterTextField.textColor = UIColor.black
+        } else {
+            self.emailRegisterTextField.textColor = UIColor.red
+        }
+    }
+    
+    
+    @IBAction func phoneAct(_ sender: Any) {
+        let text = self.numberRegisterTextField.text ?? ""
+        if text.filterPhoneNumber().isValidPhone() {
+            self.numberRegisterTextField.textColor = UIColor.black
+        } else {
+            self.numberRegisterTextField.textColor = UIColor.red
+        }
+    }
+    
+    
+    @IBAction func cpfAct(_ sender: Any) {
+        let text = self.documentRegisterTextField.text ?? ""
+        if text.isCPF == false{
+            self.documentRegisterTextField.layer.borderColor = UIColor.black.cgColor
+        }else{
+            self.documentRegisterTextField.layer.borderColor = UIColor.red.cgColor
+        }
+    }
+    
 }
 extension cadastroViewController:UITextFieldDelegate{
     func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -155,27 +223,19 @@ extension cadastroViewController:UITextFieldDelegate{
                 self.emailRegisterTextField.layer.borderColor = UIColor.lightGray.cgColor
             }
         }
-        if self.nameRegisterTextField.text != "" && self.numberRegisterTextField.text != "" && self.dateRegisterTextField.text != "" && self.documentRegisterTextField.text != "" && self.estadoCivilRegisterTextField.text != "" && self.sexoRegisterTextField.text != "" && self.emailRegisterTextField.text != ""{
-            if self.checkboxFlag == true {
+        if self.nameRegisterTextField.text != "" && self.numberRegisterTextField.text != "" && self.dateRegisterTextField.text != "" && self.documentRegisterTextField.text != "" && self.estadoCivilRegisterTextField.text != "" && self.sexoRegisterTextField.text != "" && self.emailRegisterTextField.text != "" && self.checkboxFlag == true && self.nameRegisterTextField.textColor == UIColor.black && self.emailRegisterTextField.textColor == UIColor.black && self.numberRegisterTextField.textColor == UIColor.black{
                 self.registerButton.isEnabled = true
             }else{
                 self.registerButton.isEnabled = false
-            }
-        }else{
-            self.registerButton.isEnabled = false
         }
-            
-            
 
     }
     
-    //função para só permitir entrada de numeros no textField
-//     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-//        let allowedCharacters = "+0123456789"
-//        let allowedCharactersSet = CharacterSet(charactersIn: allowedCharacters)
-//        let typedCharactersSet = CharacterSet(charactersIn: string)
-//
-//        return allowedCharactersSet.isSuperset(of: typedCharactersSet)
-//    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
 
 }
+

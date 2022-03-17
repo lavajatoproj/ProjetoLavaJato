@@ -18,6 +18,34 @@ class profileEditViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var saveButton: UIButton!
     
+    class PopUpWindow: UIViewController {
+        
+        private let popUpWindowView = PopUpWindowView()
+
+        init(title: String, text: String, buttontext: String) {
+            super.init(nibName: nil, bundle: nil)
+            modalTransitionStyle = .crossDissolve
+                    modalPresentationStyle = .overFullScreen
+                    
+                    popUpWindowView.popupTitle.text = title
+                    popUpWindowView.popupText.text = text
+                    popUpWindowView.popupButton.setTitle(buttontext, for: .normal)
+            popUpWindowView.popupButton.addTarget(self, action: #selector(dismissView), for: .touchUpInside)
+            view = popUpWindowView
+
+        }
+
+        required init(coder aDecoder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+        @objc func dismissView(){
+            self.dismiss(animated: true, completion: nil)
+        }
+      
+    }
+    
+    //Para capturar data no textField
+    let datePicker = UIDatePicker()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,21 +76,83 @@ class profileEditViewController: UIViewController {
         
         self.saveButton.isEnabled = false
         
+        self.createDatePicker()
+    }
+
+//criando barra com botão done no datePicker
+    func createToolbar () -> UIToolbar {
+        //toolbar
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
+        toolbar.setItems([doneButton], animated: true)
+        return toolbar
     }
     
+//definindo funcoes e validacao para o datePicker
+    public func createDatePicker(){
+        datePicker.preferredDatePickerStyle = .wheels
+        datePicker.datePickerMode = .date
+        datePicker.set18YearValidation()
+        dateTextField.inputView = datePicker
+        dateTextField.inputAccessoryView = createToolbar()
+        }
+    
+//definindo acao apos apertar o botao done
+    @objc func donePressed(){
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        self.dateTextField.text = dateFormatter.string(from: datePicker.date)
+        self.view.endEditing(true)
+    }
+    
+    
     @IBAction func tappedSaveButton(_ sender: UIButton) {
-        performSegue(withIdentifier: "saveButtonSegue", sender: nil)
+        var popUpWindow: PopUpWindow!
+        popUpWindow = PopUpWindow(title: "Concluído", text: "Suas alterações foram salvas", buttontext: "Confirmar")
+        self.present(popUpWindow, animated: true, completion: nil)
     }
-    @IBAction func tappedBackButton(_ sender: UIButton) {
-        performSegue(withIdentifier: "returnUserProfileSegue", sender: nil)
-    }
+    
     @IBAction func tappedChangePassword(_ sender: UIButton) {
         performSegue(withIdentifier: "changePasswordSegue", sender: nil)
     }
     @IBAction func tappedChangeService(_ sender: UIButton) {
         performSegue(withIdentifier: "changeServicesSegue", sender: nil)
     }
+    
+    @IBAction func nameAct(_ sender: Any) {
+        let text = self.nameTextField.text ?? ""
+        if text.isValidName() {
+            self.nameTextField.textColor = UIColor.black
+        } else {
+            self.nameTextField.textColor = UIColor.red
+        }
+    }
+    
+    
+    @IBAction func phoneAct(_ sender: Any) {
+        let text = self.numberTextField.text ?? ""
+        if text.filterPhoneNumber().isValidPhone() {
+            self.numberTextField.textColor = UIColor.black
+        } else {
+            self.numberTextField.textColor = UIColor.red
+        }
+    }
+    
+    @IBAction func emailAct(_ sender: Any) {
+        let text = self.emailTextField.text ?? ""
+        if text.isValidEmail() {
+            self.emailTextField.textColor = UIColor.black
+        } else {
+            self.emailTextField.textColor = UIColor.red
+        }
+    }
+    
+    
 }
+
 extension profileEditViewController:UITextFieldDelegate{
     
     //textFieldDidBeginEditing = Não faz validação, apenas da foco ao teclado, ou seja, todas as funções presentes serão executadas assim que houver o clique no textfield.
@@ -107,22 +197,15 @@ extension profileEditViewController:UITextFieldDelegate{
             }
         }
         
-        if self.nameTextField.text != "" && self.emailTextField.text != "" && self.numberTextField.text != "" && self.dateTextField.text != ""{
-            if self.emailTextField.validateEmail(){
-                self.emailTextField.layer.borderColor = UIColor.lightGray.cgColor
+        if self.nameTextField.text != "" && self.emailTextField.text != "" && self.numberTextField.text != "" && self.dateTextField.text != "" && self.nameTextField.textColor == UIColor.black && self.emailTextField.textColor == UIColor.black && self.numberTextField.textColor == UIColor.black{
                 self.saveButton.isEnabled = true
-            }else{
-                self.emailTextField.layer.borderColor = UIColor.red.cgColor
-                self.saveButton.isEnabled = false
-            }
         }else{
             self.saveButton.isEnabled = false
         }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        print(#function)
-        textField.resignFirstResponder()
+            textField.resignFirstResponder()
         return true
     }
     

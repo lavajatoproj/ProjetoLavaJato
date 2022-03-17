@@ -32,7 +32,7 @@ class PerfilUsuarioViewController: UIViewController {
     }
     
     @IBAction func tappedHelpButton(_ sender: UIButton) {
-        performSegue(withIdentifier: "helpPageSegue", sender: nil)
+//        performSegue(withIdentifier: "helpPageSegue", sender: nil)
     }
     
     @IBAction func tappedRecomendButton(_ sender: UIButton) {
@@ -43,10 +43,10 @@ class PerfilUsuarioViewController: UIViewController {
     }
     
     @IBAction func tappedEditProfile(_ sender: UIButton) {
-        performSegue(withIdentifier: "editProfileSegue", sender: nil)
+//        performSegue(withIdentifier: "editProfileSegue", sender: nil)
     }
     @IBAction func tappedNotification(_ sender: UIButton) {
-        performSegue(withIdentifier: "notificationSegue", sender: nil)
+//        performSegue(withIdentifier: "notificationSegue", sender: nil)
     }
     
     
