@@ -5,6 +5,7 @@
 //  Created by Olimpio Junior on 04/02/22.
 //
 
+import GooglePlaces
 import GoogleMaps
 import UIKit
 
@@ -15,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         UITabBar.appearance().tintColor = UIColor.ColorDefault
         GMSServices.provideAPIKey("AIzaSyBkMktW0sYUqwpDXhyXFfoPRLFYh5JeFlk")
+        GMSPlacesClient.provideAPIKey("AIzaSyBkMktW0sYUqwpDXhyXFfoPRLFYh5JeFlk")
         // Override point for customization after application launch.
         return true
     }

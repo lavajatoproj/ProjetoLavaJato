@@ -163,11 +163,22 @@
                         <outlet property="tfEmail" destination="UQ5-zM-Lo6" id="6cl-Xu-xlr"/>
                         <outlet property="tfPassword" destination="P1U-qE-vra" id="oL6-uc-GLA"/>
                         <segue destination="AXu-fg-QEO" kind="presentation" identifier="telaPrincipal" modalPresentationStyle="fullScreen" id="qmY-Tu-FYC"/>
+                        <segue destination="Y64-TY-bWd" kind="presentation" identifier="password" id="5m2-l3-w9X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c9R-q9-3UQ" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="257" y="78"/>
+        </scene>
+        <!--password-->
+        <scene sceneID="M9Q-Wa-3xO">
+            <objects>
+                <viewControllerPlaceholder storyboardName="RecuperarSenha" referencedIdentifier="password" id="Y64-TY-bWd" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="2af-l9-vjd"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IbC-9d-6eC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="996" y="-38"/>
         </scene>
         <!--TelaPrincipal-->
         <scene sceneID="D0r-s1-Vsq">

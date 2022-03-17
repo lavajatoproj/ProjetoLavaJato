@@ -41,13 +41,7 @@ class meusServicosViewController: UIViewController, UITableViewDelegate, UITable
         self.servicoLabel.text = "-"
         self.valorLabel.text = "-"
     }
-    
-    
-    
-    @IBAction func btMaps(_ sender: Any) {
-        performSegue(withIdentifier: "maps", sender: nil)
-    }
-    
+        
     private func configTableView(){
         self.tableView.delegate = self
         self.tableView.dataSource = self
