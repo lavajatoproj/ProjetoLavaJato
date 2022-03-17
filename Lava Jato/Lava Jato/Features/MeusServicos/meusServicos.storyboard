@@ -157,22 +157,7 @@
                             <constraint firstItem="5pi-s9-6fR" firstAttribute="leading" secondItem="dpW-d0-naB" secondAttribute="trailing" constant="93" id="tcM-Ae-p9s"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Meus Serviços" id="ovE-36-rrE">
-                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="s5d-4l-CWO">
-                            <rect key="frame" x="157.5" y="0.0" width="99" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" red="0.31764706970000001" green="0.69411766529999996" blue="0.75294119120000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="Maps">
-                                <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="30"/>
-                                <color key="baseForegroundColor" red="0.062228627502918243" green="0.48646479845046997" blue="0.85974377393722534" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </buttonConfiguration>
-                            <connections>
-                                <action selector="btMaps:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="RGL-0Z-m9I"/>
-                                <segue destination="Lv4-jw-BNq" kind="show" identifier="maps" id="Pmm-JU-Jq2"/>
-                            </connections>
-                        </button>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Meus Serviços" id="ovE-36-rrE"/>
                     <connections>
                         <outlet property="background" destination="Is9-Sc-fkL" id="V6U-D0-X7R"/>
                         <outlet property="background2" destination="RYd-vd-LMw" id="9lS-m5-xOd"/>
@@ -189,16 +174,6 @@
             </objects>
             <point key="canvasLocation" x="2765.217391304348" y="81.696428571428569"/>
         </scene>
-        <!--Maps-->
-        <scene sceneID="6Dj-9v-WXB">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Maps" id="Lv4-jw-BNq" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="Maq-Mp-WQD"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Jey-wH-BYj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3587" y="36"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Zf5-r1-LEP">
             <objects>
@@ -209,6 +184,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="atY-kE-Y5y">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" name="ColorDefault"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

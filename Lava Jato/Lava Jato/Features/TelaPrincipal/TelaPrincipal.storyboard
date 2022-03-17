@@ -71,6 +71,7 @@
                                         <connections>
                                             <outlet property="nameServicoLabel" destination="Gnm-IK-V7w" id="wWH-JX-Dqp"/>
                                             <outlet property="servicoImageView" destination="yqj-Jb-Whb" id="j6I-Hx-M5w"/>
+                                            <segue destination="Puq-r5-TQe" kind="show" id="Sa6-Z3-hXA"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -98,6 +99,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6700.0000000000009" y="-110.49107142857143"/>
+        </scene>
+        <!--listaDeServicos-->
+        <scene sceneID="fa2-D9-qh9">
+            <objects>
+                <viewControllerPlaceholder storyboardName="listaDeServicos" id="Puq-r5-TQe" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="x3X-lk-Yhe"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PHK-TY-4tE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7311" y="-110"/>
         </scene>
         <!--PerfilUsuario-->
         <scene sceneID="cKN-3n-z2t">
