@@ -28,7 +28,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notificações" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NcZ-PQ-aox">
-                                <rect key="frame" x="154" y="44" width="106" height="22"/>
+                                <rect key="frame" x="154" y="47" width="106" height="22"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <color key="textColor" name="ColorDefault"/>
                                 <nil key="highlightedColor"/>
@@ -38,7 +38,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="O4S-Dc-0xx" firstAttribute="trailing" secondItem="tmI-LT-IUC" secondAttribute="trailing" constant="7" id="BZ6-f2-Hku"/>
-                            <constraint firstItem="NcZ-PQ-aox" firstAttribute="top" secondItem="O4S-Dc-0xx" secondAttribute="top" id="IWi-JT-DO5"/>
+                            <constraint firstItem="NcZ-PQ-aox" firstAttribute="top" secondItem="O4S-Dc-0xx" secondAttribute="top" constant="3" id="IWi-JT-DO5"/>
                             <constraint firstItem="NcZ-PQ-aox" firstAttribute="centerX" secondItem="AGg-Sf-acf" secondAttribute="centerX" id="JUz-9G-Ohs"/>
                             <constraint firstItem="O4S-Dc-0xx" firstAttribute="bottom" secondItem="tmI-LT-IUC" secondAttribute="bottom" id="Jsr-Hd-sQs"/>
                             <constraint firstAttribute="bottom" secondItem="g9f-oI-6UG" secondAttribute="bottom" id="Puc-Gf-wzQ"/>
